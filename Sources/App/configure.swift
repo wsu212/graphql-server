@@ -9,7 +9,7 @@ public func configure(_ app: Application) async throws {
     // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
     
     // Register the GraphQL schema with the resolver
-    app.register(graphQLSchema: postSchema, withResolver: PostResolver())
+    app.register(graphQLSchema: friendSchema, withResolver: FriendResolver())
 
     app.databases.use(DatabaseConfigurationFactory.postgres(configuration: .init(
         hostname: Environment.get("DATABASE_HOST") ?? "localhost",
