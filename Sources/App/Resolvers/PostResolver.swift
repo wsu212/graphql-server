@@ -15,17 +15,8 @@ struct PostResolver {
         Post(id: 1, title: "First Post"),
         Post(id: 2, title: "Second Post")
     ]
-
-//    func getPost(by id: Int) -> Post? {
-//        return posts.first { $0.id == id }
-//    }
-//
-//    func getAllPosts() -> [Post] {
-//        return posts
-//    }
     
     func getAllPosts(request: Request, _: NoArguments) throws -> [Post] {
         posts
-        //Todo.query(on: request.db).all()
     }
 }
