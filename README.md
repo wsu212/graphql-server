@@ -1,6 +1,6 @@
-# Vapor GraphQL Friends API
+## Overview
 
-This is a **GraphQL** server built using [Vapor](https://vapor.codes), a Swift framework for server-side development. The server allows you to manage a list of friends, providing functionality to retrieve, create, update, and delete friend data through GraphQL queries and mutations.
+This is a GraphQL server built using [Vapor](https://vapor.codes), a Swift framework for server-side development. The server allows you to manage a list of friends, providing functionality to retrieve, create, update, and delete friend data through GraphQL queries and mutations.
 
 ## Features
 
