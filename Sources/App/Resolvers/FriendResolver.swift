@@ -27,4 +27,8 @@ struct FriendResolver {
     func getAllFriends(request: Request, _: NoArguments) throws -> [Friend] {
         friends
     }
+    
+    func getFriendById(request: Request, arguments: FriendArguments) throws -> Friend? {
+        friends.first { $0.regiId == arguments.regiId }
+    }
 }

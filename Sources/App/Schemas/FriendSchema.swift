@@ -17,6 +17,12 @@ let friendSchema = try! Schema<FriendResolver, Request> {
     }
     
     Query {
+        // Fetch all friends
         Field("friends", at: FriendResolver.getAllFriends)
+        
+        // Fetch friend by regiId
+        Field("friend", at: FriendResolver.getFriendById) {
+            Argument("regiId", at: \.regiId)
+        }
     }
 }
