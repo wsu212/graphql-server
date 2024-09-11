@@ -55,3 +55,15 @@ query {
     name
   }
 }
+```
+
+#### 2. Retrieve Friend by id
+
+```graphql
+query {
+  friend(id: id) {
+    id
+    name
+  }
+}
+```
