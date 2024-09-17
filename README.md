@@ -67,3 +67,14 @@ query {
   }
 }
 ```
+
+#### 3. Create new Friend by id and name
+
+```graphql
+ mutation {
+  addFriend(id: id, name: "name") {
+    id
+    name
+  }
+}
+```
