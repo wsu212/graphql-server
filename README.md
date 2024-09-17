@@ -14,7 +14,6 @@ This is a GraphQL server built using [Vapor](https://vapor.codes), a Swift frame
 
 - Swift 5.6+
 - Vapor 4.x
-- GraphQL Vapor 2.x
 
 ## Installation
 
