@@ -25,4 +25,12 @@ let friendSchema = try! Schema<FriendResolver, Request> {
             Argument("regiId", at: \.regiId)
         }
     }
+    
+    Mutation {
+        // Add new friend
+        Field("addFriend", at: FriendResolver.addFriend) {
+            Argument("regiId", at: \.regiId)
+            Argument("name", at: \.name)
+        }
+    }
 }

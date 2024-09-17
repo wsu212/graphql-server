@@ -9,9 +9,9 @@ import Vapor
 import Graphiti
 import GraphQLKit
 
-// Post Resolver to handle fetching friends
-struct FriendResolver {
-    private let friends: [Friend] = [
+// Friend Resolver to handle friends management
+final class FriendResolver {
+    private var friends: [Friend] = [
         Friend(regiId: 1, name: "Francisco Lindor"),
         Friend(regiId: 2, name: "Brandon Nimmo"),
         Friend(regiId: 3, name: "Jeff McNeil"),
@@ -30,5 +30,11 @@ struct FriendResolver {
     
     func getFriendById(request: Request, arguments: FriendArguments) throws -> Friend? {
         friends.first { $0.regiId == arguments.regiId }
+    }
+    
+    func addFriend(request: Request, arguments: AddFriendArguments) throws -> Friend {
+        let friend = Friend(regiId: arguments.regiId, name: arguments.name)
+        friends.append(friend)
+        return friend
     }
 }
