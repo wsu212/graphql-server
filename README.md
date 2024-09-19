@@ -19,8 +19,8 @@ This is a GraphQL server built using [Vapor](https://vapor.codes), a Swift frame
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-username/vapor-graphql-friends.git
-    cd vapor-graphql-friends
+    git clone https://github.com/wsu212/graphql-server
+    cd graphql-server
     ```
 
 2. Install dependencies:
