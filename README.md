@@ -67,11 +67,22 @@ query {
 }
 ```
 
-#### 3. Create new Friend by id and name
+#### 3. Create Friend by id and name
 
 ```graphql
  mutation {
   addFriend(id: id, name: "name") {
+    id
+    name
+  }
+}
+```
+
+#### 4. Delete Friend by id
+
+```graphql
+ mutation {
+  deleteFriend(id: id) {
     id
     name
   }
