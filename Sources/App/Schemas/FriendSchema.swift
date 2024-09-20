@@ -32,5 +32,10 @@ let friendSchema = try! Schema<FriendResolver, Request> {
             Argument("regiId", at: \.regiId)
             Argument("name", at: \.name)
         }
+        
+        // Remove a friend
+        Field("deleteFriend", at: FriendResolver.deleteFriend) {
+            Argument("regiId", at: \.regiId)
+        }
     }
 }

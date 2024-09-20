@@ -37,4 +37,10 @@ final class FriendResolver {
         friends.append(friend)
         return friend
     }
+    
+    func deleteFriend(request: Request, arguments: DeleteFriendArguments) throws -> Friend? {
+        let friend = friends.first { $0.regiId == arguments.regiId }
+        friends.removeAll { $0.regiId == arguments.regiId }
+        return friend
+    }
 }
